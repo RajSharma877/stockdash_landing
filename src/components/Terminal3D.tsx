@@ -1,6 +1,6 @@
 import { useRef, Suspense } from 'react';
 import { Canvas, useLoader } from '@react-three/fiber';
-import { Float, Environment, PresentationControls } from '@react-three/drei';
+import { Float, Environment, OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import stockdashScreenshot from '../assets/stockdash-screenshot.png';
 
@@ -70,23 +70,20 @@ function Scene() {
       <pointLight position={[-10, -10, -10]} intensity={0.3} color="#3b82f6" />
       <pointLight position={[5, 5, 5]} intensity={0.5} color="#10b981" />
 
-      <PresentationControls
-        global
-        config={{ mass: 2, tension: 500 }}
-        snap={{ mass: 4, tension: 300 }}
-        rotation={[0.1, 0.1, 0]}
-        polar={[-Math.PI / 4, Math.PI / 4]}
-        azimuth={[-Math.PI / 4, Math.PI / 4]}
+      <OrbitControls
+        enableZoom={false}
+        enablePan={false}
+        minPolarAngle={0}
+        maxPolarAngle={Math.PI}
+      />
+      <Float
+        speed={2}
+        rotationIntensity={0.5}
+        floatIntensity={1}
+        floatingRange={[-0.1, 0.1]}
       >
-        <Float
-          speed={2}
-          rotationIntensity={0.5}
-          floatIntensity={1}
-          floatingRange={[-0.1, 0.1]}
-        >
-          <TerminalScreen />
-        </Float>
-      </PresentationControls>
+        <TerminalScreen />
+      </Float>
 
       <Environment preset="city" />
     </>
