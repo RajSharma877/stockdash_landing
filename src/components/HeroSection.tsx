@@ -10,8 +10,8 @@ export function HeroSection() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[128px]" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[128px]" />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-5rem)]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)]">
           {/* Left Content */}
           <div className="space-y-8 animate-slide-up">
             {/* Badge */}
@@ -21,20 +21,20 @@ export function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Professional{' '}
               <span className="gradient-text">Stock Analysis</span>{' '}
               at Your Fingertips
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed">
               Real-time market data, AI-driven sentiment analysis, and ML-powered forecasting. 
               Make smarter investment decisions with StockDash.
             </p>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 py-4">
+            <div className="flex flex-wrap gap-6 sm:gap-8 py-4">
               <div>
                 <div className="text-3xl font-bold text-profit">Live</div>
                 <div className="text-sm text-muted-foreground">WebSocket Data</div>

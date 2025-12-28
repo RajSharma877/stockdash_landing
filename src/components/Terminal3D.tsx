@@ -95,7 +95,7 @@ function Scene() {
 
 export function Terminal3D() {
   return (
-    <div className="w-full h-[600px] lg:h-[700px]">
+    <div className="w-full h-[350px] sm:h-[500px] lg:h-[700px]">
       <Canvas
         shadows
         camera={{ position: [0, 0, 8], fov: 45 }}
