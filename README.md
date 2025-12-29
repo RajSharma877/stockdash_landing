@@ -10,7 +10,7 @@
 
 ## 🌐 Live Preview
 
-[**🔗 View Live Demo**](https://your-deployment-link.com)
+[**🔗 View Live Demo**](https://stockdash-landing.vercel.app/)
 *(Replace this link with your Vercel/Netlify URL)*
 
 ---
